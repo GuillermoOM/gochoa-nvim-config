@@ -217,7 +217,14 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
-
+vim.filetype.add {
+  extension = {
+    ['ship'] = 'lua',
+    ['wepn'] = 'lua',
+    ['miss'] = 'lua',
+    ['wf'] = 'lua',
+  },
+}
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -607,6 +614,8 @@ require('lazy').setup({
         -- clangd = {},
         -- gopls = {},
         pyright = {},
+        rome = {},
+        ts_ls = {},
         -- rust_analyzer = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -709,6 +718,17 @@ require('lazy').setup({
         -- rust = { 'rustfmt' },
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'black' },
+        angular = { 'prettier' },
+        css = { 'prettier' },
+        flow = { 'prettier' },
+        graphql = { 'prettier' },
+        html = { 'prettier' },
+        json = { 'prettier' },
+        jsx = { 'prettier' },
+        javascript = { 'prettier' },
+        markdown = { 'prettier' },
+        typescript = { 'prettier' },
+        yaml = { 'prettier' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
