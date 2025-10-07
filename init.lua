@@ -217,12 +217,15 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
 -- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
 -- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
+--
 vim.filetype.add {
   extension = {
     ['ship'] = 'lua',
     ['wepn'] = 'lua',
     ['miss'] = 'lua',
     ['wf'] = 'lua',
+    ['subs'] = 'lua',
+    ['event'] = 'lua',
   },
 }
 -- [[ Basic Autocommands ]]
@@ -614,7 +617,7 @@ require('lazy').setup({
         -- clangd = {},
         -- gopls = {},
         pyright = {},
-        rome = {},
+        biome = {},
         ts_ls = {},
         -- rust_analyzer = {},
         --
