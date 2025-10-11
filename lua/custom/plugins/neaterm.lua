@@ -5,6 +5,8 @@ return {
   opts = {
     keymaps = {
       toggle = '<leader>tt',
+      next = '<C-S-PageDown>',
+      prev = '<C-S-PageUp>',
     },
   },
   dependencies = {

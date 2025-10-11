@@ -84,6 +84,10 @@ I hope you enjoy your Neovim journey,
 P.S. You can delete this when you're done too. It's your config now! :)
 --]]
 
+-- Custom Mods
+vim.opt.laststatus = 3
+vim.env.NODE_OPTIONS = '--max-old-space-size=8192'
+
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
@@ -732,6 +736,12 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'sqlls',
+        'taplo',
+        'sqruff',
+        'sql-formatter',
+        'isort',
+        'flake8',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
