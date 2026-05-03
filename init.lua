@@ -623,7 +623,7 @@ require('lazy').setup({
         pyright = {},
         biome = {},
         ts_ls = {},
-        -- rust_analyzer = {},
+        rust_analyzer = {},
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
@@ -728,7 +728,7 @@ require('lazy').setup({
       },
       -- You can also specify external formatters in here.
       formatters_by_ft = {
-        -- rust = { 'rustfmt' },
+        rust = { 'rustfmt' },
         -- Conform can also run multiple formatters sequentially
         python = { 'isort', 'black' },
         angular = { 'prettier' },
