@@ -1,6 +1,6 @@
 return {
-	'vague-theme/vague.nvim',
-	config = function()
-		vim.cmd.colorscheme('vague')
-	end,
+  'ellisonleao/gruvbox.nvim',
+  priority = 1000,
+  config = function() vim.cmd.colorscheme 'gruvbox' end,
+  opts = ...,
 }
