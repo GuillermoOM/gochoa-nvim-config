@@ -1,16 +1,10 @@
--- autopairs
+-- Autopairs
 -- https://github.com/windwp/nvim-autopairs
+--
+-- NOTE: the old lazy spec integrated with hrsh7th/nvim-cmp on confirm_done.
+-- This config uses blink.cmp as its completion engine, so that integration is
+-- omitted; autopairs only handles bracket/quote pairing here.
 
----@module 'lazy'
----@type LazySpec
-return {
-  'windwp/nvim-autopairs',
-  event = 'InsertEnter',
-  dependencies = { 'hrsh7th/nvim-cmp' },
-  config = function()
-    require('nvim-autopairs').setup {}
-    local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
-    local cmp = require 'cmp'
-    cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
-  end,
-}
+vim.pack.add { 'https://github.com/windwp/nvim-autopairs' }
+
+require('nvim-autopairs').setup {}

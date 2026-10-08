@@ -1,9 +1,11 @@
-return {
-    'MeanderingProgrammer/render-markdown.nvim',
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },            -- if you use the mini.nvim suite
-    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.icons' },        -- if you use standalone mini plugins
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
-    ---@module 'render-markdown'
-    ---@type render.md.UserConfig
-    opts = {},
+-- Pretty markdown rendering
+-- https://github.com/MeanderingProgrammer/render-markdown.nvim
+
+vim.pack.add {
+  'https://github.com/MeanderingProgrammer/render-markdown.nvim',
+  'https://github.com/nvim-treesitter/nvim-treesitter', -- required dependency (already added in init.lua; re-adding is a no-op)
+  'https://github.com/nvim-tree/nvim-web-devicons',
 }
+
+---@type render.md.UserConfig
+require('render-markdown').setup {}

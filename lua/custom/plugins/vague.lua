@@ -1,6 +1,6 @@
-return {
-  'ellisonleao/gruvbox.nvim',
-  priority = 1000,
-  config = function() vim.cmd.colorscheme 'gruvbox' end,
-  opts = ...,
-}
+-- Colorscheme: gruvbox (file name kept from its earlier vague.nvim variant)
+-- https://github.com/ellisonleao/gruvbox.nvim
+
+vim.pack.add { 'https://github.com/ellisonleao/gruvbox.nvim' }
+
+vim.cmd.colorscheme 'gruvbox'
